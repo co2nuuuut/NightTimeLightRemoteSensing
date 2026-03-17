@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>全球城市韧性分析系统</title>
+    
+    <!-- 引入 Leaflet.js 地图库的 CSS 和 JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <style>
+        /* --- 全局样式 --- */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            margin: 0;
+            background-color: #f1f5f9; /* 浅色背景 */
+            color: #334155; /* 深色文字 */
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* --- 顶部标题栏 --- */
+        header {
+            background-color: #ffffff; /* 白色背景 */
+            padding: 16px 32px;
+            border-bottom: 1px solid #e2e8f0; /* 浅色边框 */
+            flex-shrink: 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 22px;
+            font-weight: 600;
+            color: #1e293b; /* 深色标题 */
+        }
+
+        /* --- 主内容区布局 --- */
+        .main-container {
+            display: flex;
+            flex-grow: 1;
+            padding: 24px;
+            gap: 24px;
+        }
+
+        /* --- 左侧地图核心区 --- */
+        .map-container {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .module-title {
+            padding: 16px 24px;
+            font-size: 18px;
+            font-weight: 600;
+            border-bottom: 1px solid #e2e8f0;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+
+        .map-overlay {
+            position: absolute;
+            bottom: 24px;
+            left: 24px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            padding: 16px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+
+        .legend-title {
+            margin: 0 0 10px 0;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            margin-bottom: 6px;
+        }
+
+        .legend-color {
+            width: 18px;
+            height: 18px;
+            margin-right: 10px;
+            border-radius: 4px;
+        }
+
+        /* --- 右侧信息交互面板 --- */
+        .sidebar {
+            width: 450px;
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .panel {
+            background-color: #ffffff;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 时序图表模块 */
+        .timeseries-panel {
+            flex-basis: 40%;
+            min-height: 250px;
+        }
+
+        .panel-content {
+            padding: 24px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chart-controls {
+            margin-bottom: 24px;
+        }
+        
+        .chart-controls label {
+            font-size: 14px;
+            margin-bottom: 8px;
+            display: block;
+            color: #64748b;
+        }
+
+        .chart-controls select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #cbd5e1;
+            background-color: #f8fafc;
+            color: #334155;
+            font-size: 14px;
+        }
+
+        .chart-placeholder {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #94a3b8;
+            font-size: 14px;
+            text-align: center;
+            border: 2px dashed #e2e8f0;
+            border-radius: 8px;
+            min-height: 100px;
+        }
+        
+        /* 智能体交互模块 */
+        .agent-panel {
+            flex-grow: 1;
+        }
+        
+        .chat-window {
+            flex-grow: 1;
+            padding: 16px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .chat-message {
+            padding: 12px 16px;
+            border-radius: 16px;
+            max-width: 85%;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .user-message {
+            background-color: #4f46e5;
+            color: #ffffff;
+            align-self: flex-end;
+            border-bottom-right-radius: 4px;
+        }
+
+        .agent-message {
+            background-color: #e2e8f0; /* 浅灰色背景 */
+            color: #334155; /* 深灰色文字 */
+            align-self: flex-start;
+            border-bottom-left-radius: 4px;
+        }
+        
+        .input-area {
+            display: flex;
+            padding: 16px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .input-area input {
+            flex-grow: 1;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            background-color: #f8fafc;
+            color: #334155;
+            border-radius: 8px;
+            margin-right: 12px;
+            font-size: 15px;
+        }
+
+        .input-area button {
+            padding: 12px 20px;
+            border: none;
+            background-color: #4f46e5;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background-color 0.2s;
+        }
+        
+        .input-area button:hover {
+            background-color: #6366f1;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>全球城市韧性分析系统</h1>
+    </header>
+
+    <div class="main-container">
+        <!-- 1. 以地图组件为核心的空间可视模块 -->
+        <div class="map-container">
+            <div class="module-title">全球城市韧性空间分布</div>
+            <div id="map"></div>
+            <div class="map-overlay">
+                <p class="legend-title">城市韧性指数图例</p>
+                <div class="legend-item"><div class="legend-color" style="background-color: #ef4444;"></div> 较低 (Low)</div>
+                <div class="legend-item"><div class="legend-color" style="background-color: #f97316;"></div> 偏低 (Lower-Mid)</div>
+                <div class="legend-item"><div class="legend-color" style="background-color: #eab308;"></div> 中等 (Medium)</div>
+                <div class="legend-item"><div class="legend-color" style="background-color: #84cc16;"></div> 偏高 (Higher-Mid)</div>
+                <div class="legend-item"><div class="legend-color" style="background-color: #22c55e;"></div> 较高 (High)</div>
+            </div>
+        </div>
+
+        <!-- 右侧面板区 -->
+        <div class="sidebar">
+            <!-- 2. 以动态面板为载体的时序图表模块 -->
+            <div class="panel timeseries-panel">
+                <div class="module-title">城市韧性动态分析面板</div>
+                <div class="panel-content">
+                    <div class="chart-controls">
+                        <label for="city-select">选择分析城市:</label>
+                        <select id="city-select">
+                            <option value="jiuzhaigou">中国，九寨沟县 (2017 地震)</option>
+                            <option value="mexico_city">墨西哥，墨西哥城 (2017 地震)</option>
+                            <option value="palu">印度尼西亚，帕卢 (2018 地震)</option>
+                            <option value="christchurch">新西兰，基督城 (2011 地震)</option>
+                            <option value="fukushima">日本，福岛 (2011 地震海啸)</option>
+                            <option value="houston">美国，休斯顿 (2017 飓风)</option>
+                        </select>
+                    </div>
+                    <div class="chart-placeholder">
+                       <p>请选择一个城市以查看其韧性动态分析</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. 以输入框为入口的智能体交互模块 -->
+            <div class="panel agent-panel">
+                <div class="module-title">城市韧性智能体</div>
+                <div class="chat-window">
+                    <div class="chat-message agent-message">
+                        你好！我是城市韧性分析智能体。你可以向我提问关于全球城市灾害韧性的问题。
+                    </div>
+                    <div class="chat-message user-message">
+                       请对比分析2017年墨西哥城地震和2018年印尼帕卢地震的城市恢复模式差异。
+                    </div>
+                     <div class="chat-message agent-message">
+                       **分析报告：**<br>
+                       1. **恢复速度**：墨西哥城的夜间灯光数据显示其恢复速度较快，约在3-4个月内恢复至震前趋势水平。<br>
+                       2. **恢复程度**：帕卢因同时遭受地震、海啸和土壤液化三重打击，基础设施损毁严重，其恢复过程漫长且至今仍未完全达到震前发展轨迹。<br>
+                       3. **主要影响因素**：墨西哥城的经济基础和应急响应体系更为完善；而帕卢的灾害链式反应和相对脆弱的经济结构是其恢复缓慢的关键原因。
+                    </div>
+                </div>
+                <div class="input-area">
+                    <input type="text" placeholder="在此输入您的问题...">
+                    <button>发送</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 初始化 Leaflet 地图
+        var map = L.map('map').setView([20, 30], 2.5);
+
+        // 添加 OpenStreetMap 浅色主题的瓦片图层
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+            subdomains: 'abcd',
+            maxZoom: 19
+        }).addTo(map);
+
+        // 示例城市标记点
+        var cities = {
+            jiuzhaigou: { lat: 33.26, lng: 103.92, name: '九寨沟县', resilience: '偏低', color: '#f97316'},
+            mexico_city: { lat: 19.43, lng: -99.13, name: '墨西哥城', resilience: '中等', color: '#eab308' },
+            palu: { lat: -0.89, lng: 119.87, name: '帕卢', resilience: '较低', color: '#ef4444' },
+            christchurch: { lat: -43.53, lng: 172.63, name: '基督城', resilience: '偏高', color: '#84cc16' },
+            fukushima: { lat: 37.75, lng: 140.46, name: '福岛', resilience: '中等', color: '#eab308' },
+            houston: { lat: 29.76, lng: -95.36, name: '休斯顿', resilience: '较高', color: '#22c55e' }
+        };
+
+        // 为每个城市添加一个圆圈标记
+        for (var key in cities) {
+            var city = cities[key];
+            L.circle([city.lat, city.lng], {
+                color: city.color,
+                fillColor: city.color,
+                fillOpacity: 0.6,
+                radius: 150000 
+            }).addTo(map).bindPopup(`<b>${city.name}</b><br>韧性评估: ${city.resilience}`);
+        }
+
+        // 地图与下拉菜单联动
+        document.getElementById('city-select').addEventListener('change', function(e) {
+            var selectedCity = cities[e.target.value];
+            if (selectedCity) {
+                map.flyTo([selectedCity.lat, selectedCity.lng], 6);
+            }
+        });
+    </script>
+</body>
+</html>

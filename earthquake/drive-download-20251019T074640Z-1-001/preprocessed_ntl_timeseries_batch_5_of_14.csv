@@ -1,0 +1,6 @@
+system:index,NTL_Post_W0,NTL_Post_W1,NTL_Pre_W1,NTL_Pre_W2,NTL_Pre_W3,NTL_Pre_W4,NTL_Pre_W5,NTL_Pre_W6,NTL_Pre_W7,NTL_Pre_W8,date,location_name,magnitude,.geo
+0,-999,-999,-999,-999,-999,-999,-999,-999,-999,-999,2021-02-10,southeast of the Loyalty Islands,7.7,"{""type"":""Point"",""coordinates"":[171.6566,-23.0511]}"
+1,,,,,,,,,,,2020-10-19,"2020 Sand Point, Alaska Earthquake",7.6,"{""type"":""Point"",""coordinates"":[-159.6258,54.602]}"
+2,,,,,,,,,,,2020-07-22,"2020 Perryville, Alaska Earthquake",7.8,"{""type"":""Point"",""coordinates"":[-158.596,55.07149999999999]}"
+3,,,,,,,-999,-999,-999,-999,2020-03-25,"221 km SSE of Severo-Kuril’sk, Russia",7.5,"{""type"":""Point"",""coordinates"":[157.6955,48.963800000000006]}"
+4,-999,-999,-999,-999,-999,-999,-999,-999,-999,-999,2020-01-28,"123 km NNW of Lucea, Jamaica",7.7,"{""type"":""Point"",""coordinates"":[-78.756,19.4193]}"

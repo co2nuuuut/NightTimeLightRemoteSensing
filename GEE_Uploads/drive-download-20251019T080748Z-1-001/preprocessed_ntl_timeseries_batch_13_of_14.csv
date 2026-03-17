@@ -1,0 +1,6 @@
+system:index,date,location_name,magnitude,.geo
+0,2013-05-24,Sea of Okhotsk,8.3,"{""type"":""Point"",""coordinates"":[153.221,54.89200000000001]}"
+1,2013-04-16,"79 km ESE of Kh?sh, Iran",7.7,"{""type"":""Point"",""coordinates"":[61.99600000000001,28.033]}"
+2,2013-02-06,"75 km W of Lata, Solomon Islands",8,"{""type"":""Point"",""coordinates"":[165.114,-10.799]}"
+3,2013-01-05,"110 km SW of Edna Bay, Alaska",7.5,"{""type"":""Point"",""coordinates"":[-134.8591,55.22800000000001]}"
+4,2012-10-28,"206 km SW of Prince Rupert, Canada",7.8,"{""type"":""Point"",""coordinates"":[-132.101,52.788000000000004]}"

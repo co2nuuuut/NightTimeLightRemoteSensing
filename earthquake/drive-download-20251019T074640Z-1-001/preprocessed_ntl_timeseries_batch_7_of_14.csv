@@ -1,0 +1,6 @@
+system:index,NTL_Post_W10,NTL_Post_W11,NTL_Post_W12,NTL_Post_W13,NTL_Post_W14,NTL_Post_W15,NTL_Post_W5,NTL_Post_W7,NTL_Post_W8,NTL_Post_W9,date,location_name,magnitude,.geo
+0,-999,-999,-999,-999,-999,-999,0.303417444229126,0.0,-999,-999,2018-09-06,"45 km S of Levuka, Fiji",7.9,"{""type"":""Point"",""coordinates"":[179.35020000000003,-18.474300000000003]}"
+1,,-999,-999,-999,-999,-999,,,,,2018-08-19,"267 km E of Levuka, Fiji",8.2,"{""type"":""Point"",""coordinates"":[-178.153,-18.1125]}"
+2,0.3029946467798689,0.21891048450821213,0.7613056667614728,8.951461937189812,0.3633443749199311,0.2839296447451819,,,0.8198586392861146,,2018-02-25,"32 km SW of Tari, Papua New Guinea",7.5,"{""type"":""Point"",""coordinates"":[142.7536,-6.0699]}"
+3,,,,,,,,,,,2018-01-23,"261 km SE of Chiniak, Alaska",7.9,"{""type"":""Point"",""coordinates"":[-149.1658,56.0039]}"
+4,0.4604662571634565,,,,,,-999,,,,2018-01-10,"203 km NNE of Barra Patuca, Honduras",7.5,"{""type"":""Point"",""coordinates"":[-83.52,17.482500000000005]}"

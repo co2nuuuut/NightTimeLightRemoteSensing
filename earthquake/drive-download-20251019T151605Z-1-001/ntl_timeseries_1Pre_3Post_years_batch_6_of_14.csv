@@ -1,0 +1,6 @@
+system:index,date,location_name,magnitude,.geo
+0,2019-05-26,"78 km NE of Navarro, Peru",8,"{""type"":""Point"",""coordinates"":[-75.2697,-5.811899999999999]}"
+1,2019-05-14,"48 km NE of Kokopo, Papua New Guinea",7.6,"{""type"":""Point"",""coordinates"":[152.5967,-4.051]}"
+2,2019-02-22,"115 km ESE of Palora, Ecuador",7.5,"{""type"":""Point"",""coordinates"":[-77.0505,-2.1862]}"
+3,2018-12-05,"166 km ESE of Tadine, New Caledonia",7.5,"{""type"":""Point"",""coordinates"":[169.4266,-21.9496]}"
+4,2018-09-28,"72 km N of Palu, Indonesia",7.5,"{""type"":""Point"",""coordinates"":[119.84619999999998,-0.2559]}"

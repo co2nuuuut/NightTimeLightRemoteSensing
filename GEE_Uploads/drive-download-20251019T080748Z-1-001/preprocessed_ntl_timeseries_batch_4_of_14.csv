@@ -1,0 +1,6 @@
+system:index,NTL_Post_W0,NTL_Post_W1,NTL_Post_W10,NTL_Post_W11,NTL_Post_W12,NTL_Post_W13,NTL_Post_W14,NTL_Post_W15,NTL_Post_W2,NTL_Post_W3,NTL_Post_W4,NTL_Post_W5,NTL_Post_W6,NTL_Post_W7,NTL_Post_W8,NTL_Post_W9,NTL_Pre_W1,NTL_Pre_W2,NTL_Pre_W3,NTL_Pre_W4,NTL_Pre_W5,NTL_Pre_W6,NTL_Pre_W7,NTL_Pre_W8,date,location_name,magnitude,.geo
+0,-999,-999,-999,-999,-999,0.12368446464339893,0.454277240886138,0.37317956270029146,-999,-999,-999,-999,-999,-999,-999,-999,-999,-999,-999,0.28112396445464005,0.12972718896344304,0.8286640428381765,728.5075724857915,0.28081268107454327,2021-11-28,"43 km NNW of Barranca, Peru",7.5,"{""type"":""Point"",""coordinates"":[-76.8126,-4.4666999999999994]}"
+1,,,,,-999,-999,-999,-999,,,,,,,,,,,,,,,,,2021-08-12,South Sandwich Islands region,8.1,"{""type"":""Point"",""coordinates"":[-25.2637,-58.375299999999996]}"
+2,,,,,-999,-999,-999,-999,,,,,,,,,,,,,,,,,2021-08-12,South Sandwich Islands region,7.5,"{""type"":""Point"",""coordinates"":[-25.0316,-57.567400000000006]}"
+3,,,,,,,-999,-999,,,,,,,,,,,,,,,,,2021-07-29,Alaska Peninsula,8.2,"{""type"":""Point"",""coordinates"":[-157.8876,55.3635]}"
+4,,,,,,,,,,,,,,,,,,-999,-999,-999,-999,-999,-999,-999,2021-03-04,"Kermadec Islands, New Zealand",8.1,"{""type"":""Point"",""coordinates"":[-177.2794,-29.7228]}"

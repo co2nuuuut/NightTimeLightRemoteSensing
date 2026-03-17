@@ -1,0 +1,6 @@
+system:index,date,location_name,magnitude,.geo
+0,2015-05-05,"131 km SSW of Kokopo, Papua New Guinea",7.5,"{""type"":""Point"",""coordinates"":[151.8751,-5.4624]}"
+1,2015-04-25,"67 km NNE of Bharatpur, Nepal",7.8,"{""type"":""Point"",""coordinates"":[84.7314,28.2305]}"
+2,2015-03-29,"53 km SE of Kokopo, Papua New Guinea",7.5,"{""type"":""Point"",""coordinates"":[152.5623,-4.729400000000001]}"
+3,2014-06-23,"Rat Islands, Aleutian Islands, Alaska",7.9,"{""type"":""Point"",""coordinates"":[178.7352,51.8486]}"
+4,2014-04-19,"70 km SW of Panguna, Papua New Guinea",7.5,"{""type"":""Point"",""coordinates"":[155.0241,-6.7547]}"

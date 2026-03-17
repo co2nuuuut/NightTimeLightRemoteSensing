@@ -1,0 +1,6 @@
+system:index,date,location_name,magnitude,.geo
+0,2016-12-08,"69 km WSW of Kirakira, Solomon Islands",7.8,"{""type"":""Point"",""coordinates"":[161.3273,-10.681200000000002]}"
+1,2016-11-13,"53 km NNE of Amberley, New Zealand",7.8,"{""type"":""Point"",""coordinates"":[173.054,-42.7373]}"
+2,2016-07-29,"Pagan region, Northern Mariana Islands",7.7,"{""type"":""Point"",""coordinates"":[145.5073,18.5429]}"
+3,2016-04-16,"27 km SSE of Muisne, Ecuador",7.8,"{""type"":""Point"",""coordinates"":[-79.9218,0.3819]}"
+4,2016-03-02,"southwest of Sumatra, Indonesia",7.8,"{""type"":""Point"",""coordinates"":[94.3299,-4.952099999999999]}"

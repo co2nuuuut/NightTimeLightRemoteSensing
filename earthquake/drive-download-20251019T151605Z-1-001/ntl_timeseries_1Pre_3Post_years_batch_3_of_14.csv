@@ -1,0 +1,6 @@
+system:index,NTL_Post_W141,NTL_Post_W142,NTL_Post_W143,NTL_Post_W144,NTL_Post_W145,NTL_Post_W146,NTL_Post_W147,NTL_Post_W148,NTL_Post_W149,NTL_Post_W150,NTL_Post_W151,NTL_Post_W152,NTL_Post_W153,NTL_Post_W154,NTL_Post_W155,NTL_Pre_W27,date,location_name,magnitude,.geo
+0,-999,-999,-999,-999,-999,-999,-999,-999,-999,-999,-999,-999,-999,-999,-999,-999,2023-02-06,"Elbistan earthquake, Kahramanmaras earthquake sequence",7.5,"{""type"":""Point"",""coordinates"":[37.196200000000005,38.0106]}"
+1,-999,-999,-999,-999,-999,-999,-999,-999,-999,-999,-999,-999,-999,-999,-999,-999,2023-02-06,"Pazarcik earthquake, Kahramanmaras earthquake sequence",7.8,"{""type"":""Point"",""coordinates"":[37.0143,37.2256]}"
+2,,,,,-999,-999,-999,-999,-999,-999,-999,-999,-999,-999,-999,,2023-01-09,"Pulau Pulau Tanimbar, Indonesia",7.6,"{""type"":""Point"",""coordinates"":[130.009,-7.0586]}"
+3,,,,,,,,,,,,,,,,,2022-09-19,"35 km SSW of Aguililla, Mexico",7.6,"{""type"":""Point"",""coordinates"":[-102.9561,18.4552]}"
+4,,,,,,,,,,,,,,,,,2022-09-10,"70 km E of Kainantu, Papua New Guinea",7.6,"{""type"":""Point"",""coordinates"":[146.5038,-6.2944]}"

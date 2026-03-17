@@ -1,0 +1,6 @@
+system:index,date,location_name,magnitude,.geo
+0,2014-04-12,"93 km SSE of Kirakira, Solomon Islands",7.6,"{""type"":""Point"",""coordinates"":[162.1481,-11.270100000000001]}"
+1,2014-04-03,"53 km SW of Iquique, Chile",7.7,"{""type"":""Point"",""coordinates"":[-70.4931,-20.5709]}"
+2,2014-04-01,"93 km NW of Iquique, Chile",8.2,"{""type"":""Point"",""coordinates"":[-70.7691,-19.609700000000004]}"
+3,2013-11-17,Scotia Sea,7.7,"{""type"":""Point"",""coordinates"":[-46.40109999999999,-60.2738]}"
+4,2013-09-24,"113 km NW of Bela, Pakistan",7.7,"{""type"":""Point"",""coordinates"":[65.5009,26.950999999999997]}"

@@ -1,0 +1,6 @@
+system:index,NTL_Post_W35,date,location_name,magnitude,.geo
+0,-999,2021-11-28,"43 km NNW of Barranca, Peru",7.5,"{""type"":""Point"",""coordinates"":[-76.8126,-4.4666999999999994]}"
+1,,2021-08-12,South Sandwich Islands region,8.1,"{""type"":""Point"",""coordinates"":[-25.2637,-58.375299999999996]}"
+2,,2021-08-12,South Sandwich Islands region,7.5,"{""type"":""Point"",""coordinates"":[-25.0316,-57.567400000000006]}"
+3,,2021-07-29,Alaska Peninsula,8.2,"{""type"":""Point"",""coordinates"":[-157.8876,55.3635]}"
+4,,2021-03-04,"Kermadec Islands, New Zealand",8.1,"{""type"":""Point"",""coordinates"":[-177.2794,-29.7228]}"

@@ -1,0 +1,6 @@
+system:index,date,location_name,magnitude,.geo
+0,2015-11-24,"185 km WNW of Iñapari, Peru",7.6,"{""type"":""Point"",""coordinates"":[-71.0184,-10.0598]}"
+1,2015-11-24,"155 km WNW of Iñapari, Peru",7.6,"{""type"":""Point"",""coordinates"":[-70.94370000000002,-10.5372]}"
+2,2015-10-26,"Hindu Kush region, Afghanistan",7.5,"{""type"":""Point"",""coordinates"":[70.3676,36.52440000000001]}"
+3,2015-09-16,"48 km W of Illapel, Chile",8.3,"{""type"":""Point"",""coordinates"":[-71.6744,-31.5729]}"
+4,2015-05-30,"Bonin Islands, Japan region",7.8,"{""type"":""Point"",""coordinates"":[140.4931,27.838599999999996]}"

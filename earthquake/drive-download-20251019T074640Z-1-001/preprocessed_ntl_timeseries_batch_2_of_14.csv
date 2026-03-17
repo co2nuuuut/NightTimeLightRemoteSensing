@@ -1,0 +1,6 @@
+system:index,NTL_Post_W0,NTL_Post_W1,NTL_Post_W2,NTL_Pre_W1,NTL_Pre_W2,NTL_Pre_W3,NTL_Pre_W4,NTL_Pre_W5,NTL_Pre_W6,NTL_Pre_W7,NTL_Pre_W8,date,location_name,magnitude,.geo
+0,-999,-999,-999,-999,-999,-999,-999,-999,-999,-999,-999,2025-02-08,"210 km SSW of George Town, Cayman Islands",7.6,"{""type"":""Point"",""coordinates"":[-82.395,17.6506]}"
+1,-999,-999,-999,-999,-999,-999,-999,-999,-999,-999,-999,2024-01-01,"2024 Noto Peninsula, Japan Earthquake",7.5,"{""type"":""Point"",""coordinates"":[137.271,37.4874]}"
+2,-999,-999,-999,-999,-999,-999,-999,0.36397840455174446,1.3293616056442261,0.6303190986315409,0.3311100900173187,2023-12-02,"19 km E of Gamut, Philippines",7.6,"{""type"":""Point"",""coordinates"":[126.4161,8.526600000000002]}"
+3,,,,,,,,,,,,2023-05-19,southeast of the Loyalty Islands,7.7,"{""type"":""Point"",""coordinates"":[170.7423,-23.2063]}"
+4,,,,,,,,,,,,2023-05-10,"82 km WNW of Hihifo, Tonga",7.6,"{""type"":""Point"",""coordinates"":[-174.4925,-15.627799999999997]}"
