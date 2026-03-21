@@ -1,9 +1,5 @@
 # 基于卫星遥感的全球城市韧性分析方法及其系统开发
 
-> **大学生创新创业训练项目（大创）**  
-> 项目负责人：黄游睿 | 指导教师：官大衍  
-> 执行周期：2025年11月 — 2026年11月
-
 ---
 
 ## 📖 项目简介
@@ -243,9 +239,7 @@ python GEE_Uploads/rs-fi/02_Scripts/C_Validation/...
 
 ## 🧩 核心代码文件详解
 
-> 本节面向团队成员，对每个主要脚本的功能逻辑、输入/输出、关键设计决策进行详细说明，便于二次开发与迭代。
 
----
 
 ### `GEE_Uploads/EURm/EURm.py` — 批量地震韧性分析
 
@@ -276,10 +270,10 @@ python GEE_Uploads/rs-fi/02_Scripts/C_Validation/...
 **输出**
 - `urban_earthquake_resilience_final.html`：全球可交互地图，点击标记可查看城市韧性趋势图
 
-**关键配置（可修改）**
+**关键配置**
 
 ```python
-csv_directory_path = r"D:\虚拟c盘\GEE_Uploads\EURm\M65"  # ← 改为你的数据路径
+csv_directory_path = r"D:\虚拟c盘\GEE_Uploads\EURm\M65"  # ← 改为你的数据路径！！！！！！！！！
 ```
 
 **扩展建议**
